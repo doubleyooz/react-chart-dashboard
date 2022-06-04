@@ -3,7 +3,7 @@ import Dashboard from './pages/Dashboard';
 
 const Paths = () => {
     return (
-        <div>
+        <div className='bg-skin-default pt-6'>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Dashboard />} />

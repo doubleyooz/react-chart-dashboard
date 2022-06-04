@@ -5,6 +5,7 @@ interface Props {
     description: string;
     isActive: boolean;
     deleteButton?: boolean;
+    onClick: () => void;
 }
 
 const SimpleButton: React.FC<Props> = ({
@@ -12,10 +13,16 @@ const SimpleButton: React.FC<Props> = ({
     description,
     isActive,
     deleteButton,
+    onClick,
 }) => {
     return (
-        <div className="flex justify-start items-center gap-[11.5px] rounded-2xl h-12">
-            <div className="bg-skin-detail_1 w-8 h-8 rounded-xl flex justify-center items-center p-2">{Icon}</div>
+        <div
+            className={`${deleteButton ? 'justify-between' : ''} flex  items-center rounded-2xl gap-3 h-12`}
+            onClick={onClick}
+        >
+            <div className="bg-skin-detail_1 w-8 h-8 rounded-xl flex justify-center items-center p-2">
+                {Icon}
+            </div>
 
             <span
                 className={`${
