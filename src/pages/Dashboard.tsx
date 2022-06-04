@@ -1,8 +1,12 @@
+import SideMenu from "../components/SideMenu";
 
 const Dashboard = () => {
     return (
-        <div className="text-xl">
-            Dashboard
+        <div className="flex">
+            <SideMenu/>
+            <div>
+                Content
+            </div>
         </div>
     )
 }
