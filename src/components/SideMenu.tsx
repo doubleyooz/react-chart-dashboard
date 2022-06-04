@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 
 import SimpleButton from './SimpleButton';
@@ -7,10 +8,12 @@ import { ReactComponent as Home } from '../assets/menu/home.svg';
 import { ReactComponent as Status } from '../assets/menu/status.svg';
 import { ReactComponent as Card } from '../assets/menu/card.svg';
 
-interface Props {}
+interface DropdownProps {
+    setIsSelected: (isSelected: string) => void;
+    isSelected: string;
+}
 
-const SideMenu: React.FC<Props> = () => {
-    const [isSelected, setIsSelected] = useState('');
+const DropdownNav: React.FC<DropdownProps> = ({ setIsSelected, isSelected }) => {
     const [selectedItem, setSelectedItem] = useState('');
     const [isDisplayed, setIsDisplayed] = useState(false);
 
@@ -20,44 +23,63 @@ const SideMenu: React.FC<Props> = () => {
     ];
 
     return (
-        <div className="px-8">
-            <Logo className="mb-10" />
-            <div>
-                <SimpleButton
-                    Icon={<Home className="fill-skin-default" />}
-                    description="Visão Geral"
-                    isActive={isSelected === 'a'}
-                    onClick={() => setIsSelected('a')}
-                />
-
-                <div
-                    className={`${
-                        isDisplayed ? 'h-36' : 'h-12'
-                    } overflow-hidden transition-all ease duration-700`}
-                >
+        <div
+            className={`${
+                isDisplayed ? 'h-36' : 'h-12'
+            } overflow-hidden transition-all ease-out duration-700`}
+        >
+            <SimpleButton
+                Icon={<Status className="fill-skin-default" />}
+                description="Carteira dos clientes"
+                isActive={isSelected[0] === 'b'}
+                onClick={() => {
+                    setIsDisplayed(!isDisplayed);
+                    isSelected === 'b'
+                        ? setIsSelected(isSelected)
+                        : setIsSelected('b');
+                }}
+            />
+            <div className="border-l-2 pl-4 ml-3 overflow-y-scroll scrollbar-hide max-h-[480px]">
+                {data.map(({ description }, i) => (
                     <SimpleButton
-                        Icon={<Status className="fill-skin-default" />}
-                        description="Carteira dos clientes"
-                        isActive={isSelected === 'b'}
-                        onClick={() => {
-                            setIsDisplayed(!isDisplayed);
-                            setIsSelected('b');
-                        }}
+                        key={description + i}
+                        Icon={<Card className="fill-skin-default" />}
+                        description={description}
+                        isActive={selectedItem === description + i}
+                        onClick={() => setSelectedItem(description + i)}
+                        deleteButton={true}
                     />
-                    <div className='border-l-2 pl-4'>
-                        {data.map(({ description }, i) => (
-                            <SimpleButton
-                                key={description + i}
-                                Icon={<Card className="fill-skin-default" />}
-                                description={description}
-                                isActive={selectedItem === description + i}
-                                onClick={() => setSelectedItem(description + i)}
-                                deleteButton={true}
-                            />
-                        ))}
-                    </div>
-                </div>
+                ))}
             </div>
+        </div>
+    );
+};
+
+const List: React.FC<{}> = () => {
+    const [isSelected, setIsSelected] = useState('a');
+
+    return (
+        <div className="mb-[60px]">
+            <SimpleButton
+                Icon={<Home className="fill-skin-default" />}
+                description="Visão Geral"
+                isActive={isSelected[0] === 'a'}
+                onClick={() => {
+                    isSelected[0] === 'a'
+                        ? setIsSelected(isSelected)
+                        : setIsSelected('a');
+                }}
+            />
+            <DropdownNav isSelected={isSelected} setIsSelected={setIsSelected} />
+        </div>
+    );
+};
+
+const SideMenu: React.FC<{}> = () => {
+    return (
+        <div className="px-8 hidden sm:block">
+            <Logo className="mb-10" />
+            <List />
         </div>
     );
 };

@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactComponent as Close } from '../assets/menu/close.svg';
 
 interface Props {
