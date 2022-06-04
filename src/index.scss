@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    :root {
+        --color-text-solid: #2D3748;
+        --color-text-medium: #718096;
+        --color-text-mild: #A0AEC0; 
+        --color-icon-image-1: #000000;
+        --color-icon-image-2: #1FAB89;
+        --color-bg-default: #ffffff;
+        --color-bg-detail-1: #1FAB89;
+    }
+}
+/*
+@layer components {
+    .btn-primary {
+      @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    }
+}*/
