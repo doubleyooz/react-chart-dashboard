@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+$width: 1920;
+$height: 1750;
 
 @layer base {
     :root {
@@ -10,8 +12,10 @@
         --color-text-mild: #A0AEC0; 
         --color-icon-image-1: #000000;
         --color-icon-image-2: #1FAB89;
-        --color-bg-default: #ffffff;
+        --color-bg-default: #F8F9FA;
         --color-bg-detail-1: #1FAB89;
+
+        //--width-simple-button: calc(50000vw / width + 20px);
     }
 }
 /*

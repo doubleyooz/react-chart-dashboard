@@ -1,3 +1,5 @@
+import { ReactComponent as Close } from '../assets/menu/close.svg';
+
 interface Props {
     Icon: React.ReactNode;
     description: string;
@@ -12,8 +14,8 @@ const SimpleButton: React.FC<Props> = ({
     deleteButton,
 }) => {
     return (
-        <div className="flex justify-start items-center gap-[11.5px]">
-            <div className="bg-skin-detail_1 p-2">{Icon}</div>
+        <div className="flex justify-start items-center gap-[11.5px] rounded-2xl h-12">
+            <div className="bg-skin-detail_1 w-8 h-8 rounded-xl flex justify-center items-center p-2">{Icon}</div>
 
             <span
                 className={`${
@@ -22,11 +24,7 @@ const SimpleButton: React.FC<Props> = ({
             >
                 {description}
             </span>
-            {deleteButton && (
-                <div className="bg-[#7E869E] text-white rounded-[50%] p-[6px]">
-                    X
-                </div>
-            )}
+            {deleteButton && <Close />}
         </div>
     );
 };
