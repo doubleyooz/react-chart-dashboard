@@ -1,21 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 $width: 1920;
 $height: 1750;
+* {
+    z-index: 999;
+}
 
 @layer base {
-    $width: 1920;
-
     :root {
-        --color-text-solid: #2D3748;
+        --color-text-solid: #2d3748;
         --color-text-medium: #718096;
-        --color-text-mild: #A0AEC0; 
+        --color-text-mild: #a0aec0;
         --color-icon-image-1: #ffffff;
-        --color-icon-image-2: #1FAB89;
-        --color-bg-default: #F8F9FA;
-        --color-bg-detail-1: #1FAB89;
+        --color-icon-image-2: #1fab89;
+
+        --color-bg-default: #f8f9fa;
+        --color-bg-inverted: #000000;
+        --color-bg-white: #ffffff;
+        --color-bg-detail-1: 31, 171, 137;
 
         //--width-simple-button: calc(50000vw / width + 20px);
         --text-size-base: 12px;
