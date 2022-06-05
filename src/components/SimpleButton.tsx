@@ -28,7 +28,7 @@ const SimpleButton: React.FC<Props> = ({
             <span
                 className={`${
                     isActive ? 'text-skin-solid' : 'text-skin-mild'
-                } font-bold font-['Helvetica']  group-hover:text-white`}
+                } text-icon font-bold font-['Helvetica']`}
             >
                 {description}
             </span>

@@ -6,6 +6,8 @@ $width: 1920;
 $height: 1750;
 
 @layer base {
+    $width: 1920;
+
     :root {
         --color-text-solid: #2D3748;
         --color-text-medium: #718096;
@@ -16,6 +18,7 @@ $height: 1750;
         --color-bg-detail-1: #1FAB89;
 
         //--width-simple-button: calc(50000vw / width + 20px);
+        --text-size-base: 12px;
     }
 }
 /*

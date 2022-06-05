@@ -7,13 +7,19 @@ import { ReactComponent as Logo } from '../assets/menu/logo.svg';
 import { ReactComponent as Home } from '../assets/menu/home.svg';
 import { ReactComponent as Status } from '../assets/menu/status.svg';
 import { ReactComponent as Card } from '../assets/menu/card.svg';
+import { ReactComponent as User } from '../assets/menu/user.svg';
+import { ReactComponent as Config } from '../assets/menu/config.svg';
+
 
 interface DropdownProps {
     setIsSelected: (isSelected: string) => void;
     isSelected: string;
 }
 
-const DropdownNav: React.FC<DropdownProps> = ({ setIsSelected, isSelected }) => {
+const DropdownNav: React.FC<DropdownProps> = ({
+    setIsSelected,
+    isSelected,
+}) => {
     const [selectedItem, setSelectedItem] = useState('');
     const [isDisplayed, setIsDisplayed] = useState(false);
 
@@ -64,22 +70,44 @@ const List: React.FC<{}> = () => {
                 Icon={<Home className="fill-skin-default" />}
                 description="Visão Geral"
                 isActive={isSelected[0] === 'a'}
-                onClick={() => {
-                    isSelected[0] === 'a'
-                        ? setIsSelected(isSelected)
-                        : setIsSelected('a');
-                }}
+                onClick={() => setIsSelected('a')}
             />
-            <DropdownNav isSelected={isSelected} setIsSelected={setIsSelected} />
+            <DropdownNav
+                isSelected={isSelected}
+                setIsSelected={setIsSelected}
+            />
         </div>
     );
 };
+
+const Personal: React.FC<{}> = () => {
+    const [isSelected, setIsSelected] = useState(''); 
+    return (
+        <div className='mt-4'>
+            
+            <SimpleButton
+                Icon={<User className="fill-skin-default" />}
+                description="Conta"
+                isActive={isSelected[0] === 'a'}
+                onClick={() => setIsSelected('a')}
+            />
+            <SimpleButton
+                Icon={<Config className="fill-skin-default" />}
+                description="Configurações"
+                isActive={isSelected[0] === 'b'}
+                onClick={() => setIsSelected('b')}
+            />
+        </div>
+    )
+}
 
 const SideMenu: React.FC<{}> = () => {
     return (
         <div className="px-8 hidden sm:block">
             <Logo className="mb-10" />
             <List />
+            <span className="text-skin-solid font-bold font-['Helvetica']">CONTA</span>
+            <Personal />
         </div>
     );
 };

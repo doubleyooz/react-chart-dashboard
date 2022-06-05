@@ -2,6 +2,9 @@ module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     theme: {
         extend: {
+            fontSize: {
+                icon: 'var(--text-size-base)',
+            },
             textColor: {
                 skin: {
                     solid: 'var(--color-text-solid)',
