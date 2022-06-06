@@ -1,8 +1,15 @@
 import background from '../assets/content/background.png';
 import SideMenu from '../components/SideMenu';
 import Header from '../components/Header';
+import Card from '../components/Card';
 
 const Dashboard = () => {
+    const data = {
+        email: 'gabriel@agromais.com',
+        cpf: '123.456.789-50',
+        title: 'PRODUTO RURAL',
+        date: new Date()
+    }
     return (
         <div className="flex px-4">
             <SideMenu />
@@ -15,6 +22,7 @@ const Dashboard = () => {
                     />
                 </div>
                 <Header/>
+                <Card data={data} />
                 Content
             </div>
         </div>
