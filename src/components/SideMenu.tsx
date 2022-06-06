@@ -45,7 +45,7 @@ const DropdownNav: React.FC<DropdownProps> = ({
                         : setIsSelected('b');
                 }}
             />
-            <div className="border-l-2 ml-3 overflow-y-scroll scrollbar-hide max-h-[480px]">
+            <div className="border-l-2 ml-3 pl-3 overflow-y-scroll scrollbar-hide max-h-[480px]">
                 {data.map(({ description }, i) => (
                     <SimpleButton
                         key={description + i}

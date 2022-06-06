@@ -22,7 +22,7 @@ const Card: React.FC<Props> = ({ data }) => {
                     <span className="text-skin-medium">{data.email}</span>
                     <span className="text-skin-medium">{data.cpf}</span>
                 </div>
-                <div className="flex items-center gap-1 bg-skin-white p-2 rounded-xl shadow-md">
+                <div className="flex items-center gap-1 bg-skin-white px-5 py-2 rounded-xl shadow-md">
                     <div className="bg-skin-darker bg-opacity-25 rounded-md">
                         <Plus className="stroke-black" />
                     </div>

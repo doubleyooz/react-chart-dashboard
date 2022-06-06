@@ -18,7 +18,7 @@ const SimpleButton: React.FC<Props> = ({
 }) => {
     return (
         <div
-            className={`${deleteButton ? 'justify-between' : ''} flex  items-center rounded-2xl gap-3 h-12`}
+            className={`${deleteButton ? 'justify-between' : ''} flex items-center rounded-2xl gap-3 h-12`}
             onClick={onClick}
         >
             <div className="bg-skin-detail_1 w-8 h-8 rounded-xl flex justify-center items-center p-2">
