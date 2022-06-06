@@ -8,6 +8,10 @@ $height: 1750;
     z-index: 999;
 }
 
+span {
+    font-family: 'Helvetica';
+}
+
 @layer base {
     :root {
         --color-text-solid: #2d3748;
@@ -18,7 +22,7 @@ $height: 1750;
 
         --color-bg-default: #f8f9fa;
         --color-bg-inverted: #000000;
-        --color-bg-white: #ffffff;
+        --color-bg-white: 255, 255, 255;
         --color-bg-detail-1: 31, 171, 137;
 
         //--width-simple-button: calc(50000vw / width + 20px);
