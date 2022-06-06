@@ -31,7 +31,8 @@ module.exports = {
             fill: {
                 skin: {
                     default: 'var(--color-icon-image-1)',
-                    default_2: withOpacity('color-bg-detail-1')
+                    default_2: withOpacity('color-bg-detail-1'),
+                    darker: withOpacity('color-bg-darker')
                 },
             },
         },
