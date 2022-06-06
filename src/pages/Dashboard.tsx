@@ -7,9 +7,9 @@ const Dashboard = () => {
         <div className="flex px-4">
             <SideMenu />
             <div className=" flex-grow">
-                <div className="relative w-full h-10 z-[1]">
+                <div className="relative w-full z-[1]">
                     <img
-                        className="absolute top-0 right-0"
+                        className="absolute top-0 right-0 rounded-3xl"
                         src={background}
                         alt=""
                     />

@@ -24,6 +24,7 @@ module.exports = {
                     default: 'var(--color-bg-default)',
                     detail_1: withOpacity('color-bg-detail-1'),
                     inverted: withOpacity('color-bg-inverted'),
+                    white: withOpacity('color-bg-white'),
                 },
             },
             fill: {
