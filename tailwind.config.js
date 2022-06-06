@@ -22,6 +22,7 @@ module.exports = {
             backgroundColor: {
                 skin: {
                     default: 'var(--color-bg-default)',
+                    darker:  withOpacity('color-bg-darker'),
                     detail_1: withOpacity('color-bg-detail-1'),
                     inverted: withOpacity('color-bg-inverted'),
                     white: withOpacity('color-bg-white'),

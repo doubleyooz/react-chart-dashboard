@@ -16,7 +16,7 @@ const Dashboard = () => {
             <div className=" flex-grow">
                 <div className="relative w-full z-[1]">
                     <img
-                        className="absolute top-0 right-0 rounded-3xl"
+                        className="absolute top-0 right-0 min-h-[250px] rounded-3xl"
                         src={background}
                         alt=""
                     />
