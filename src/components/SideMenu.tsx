@@ -103,7 +103,7 @@ const Personal: React.FC<{}> = () => {
 
 const SideMenu: React.FC<{}> = () => {
     return (
-        <div className="px-8 hidden sm:block">
+        <div className="px-8 mt-3 hidden sm:block">
             <Logo className="mb-10" />
             <List />
             <span className="text-skin-solid font-bold font-['Helvetica']">CONTA</span>
