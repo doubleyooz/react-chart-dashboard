@@ -1,5 +1,12 @@
-import logo from '../assets/content/logo.jpg';
+import SmallButton from './SmallButton';
+
 import { ReactComponent as Plus } from '../assets/content/plus.svg';
+import { ReactComponent as Box } from '../assets/content/box.svg';
+import { ReactComponent as Chart } from '../assets/content/chart.svg';
+import { ReactComponent as Config } from '../assets/menu/config.svg';
+
+import logo from '../assets/content/logo.jpg';
+
 
 interface Props {
     data: {
@@ -9,6 +16,7 @@ interface Props {
         date: Date;
     };
 }
+
 
 const Card: React.FC<Props> = ({ data }) => {
     return (
@@ -34,12 +42,24 @@ const Card: React.FC<Props> = ({ data }) => {
             </div>
             <div className="flex items-center gap-3">
                 <div className="rounded-full w-4 h-4 border-2"></div>
-                <span className="text-sm bg-skin-solid">
-                    Cliente desde
-                </span>
+                <span className="text-sm bg-skin-solid">Cliente desde</span>
                 <span className="text-sm bg-skin-solid">
                     {data.date.toLocaleDateString()}
                 </span>
+            </div>
+            <div className="absolute bottom-0 right-0 flex gap-12 mr-12">
+                <SmallButton
+                    Icon={<Box className="fill-skin-darker" />}
+                    description="Análise"
+                />
+                <SmallButton
+                    Icon={<Chart className="fill-skin-darker" />}
+                    description="Balanço"
+                />
+                <SmallButton
+                    Icon={<Config className="fill-skin-darker" />}
+                    description="Configurações"
+                />
             </div>
         </div>
     );
