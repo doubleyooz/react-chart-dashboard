@@ -15,6 +15,7 @@ module.exports = {
             textColor: {
                 skin: {
                     solid: 'var(--color-text-solid)',
+                    detail: 'var(--color-text-detail)',
                     medium: 'var(--color-text-medium)',
                     mild: 'var(--color-text-medium)',
                 },

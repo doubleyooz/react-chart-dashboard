@@ -20,15 +20,15 @@ interface Props {
 
 const Card: React.FC<Props> = ({ data }) => {
     return (
-        <div className="relative flex justify-between gap-3 m-6 p-6 rounded-2xl bg-gradient-to-b to-[#ffffffcc] from-[#ffffffd1] backdrop-filter backdrop-blur-lg bg-opacity-80">
+        <div className="relative flex justify-between h-36 gap-3 m-6 p-6 rounded-2xl bg-gradient-to-b to-[#ffffffcc] from-[#ffffffd1] backdrop-filter backdrop-blur-lg bg-opacity-80">
             <div className="flex items-center">
-                <img className="w-16 h-16 mr-3" src={logo} alt="" />
+                <img className="w-16 h-16 mr-3 rounded-lg drop-shadow-md" src={logo} alt="" />
                 <div className="flex flex-col mr-11">
-                    <span className="text-skin-solid font-bold">
+                    <span className="text-skin-solid font-bold text-lg">
                         {data.title}
                     </span>
-                    <span className="text-skin-medium">{data.email}</span>
-                    <span className="text-skin-medium">{data.cpf}</span>
+                    <span className="text-skin-medium text-sm">{data.email}</span>
+                    <span className="text-skin-medium text-sm">CPF: {data.cpf}</span>
                 </div>
                 <div className="flex items-center gap-1 bg-skin-white px-5 py-2 rounded-xl shadow-md">
                     <div className="bg-skin-darker bg-opacity-25 rounded-md">
@@ -42,12 +42,12 @@ const Card: React.FC<Props> = ({ data }) => {
             </div>
             <div className="flex items-center gap-3">
                 <div className="rounded-full w-4 h-4 border-2"></div>
-                <span className="text-sm bg-skin-solid">Cliente desde</span>
-                <span className="text-sm bg-skin-solid">
+                <span className="text-sm font-bold text-skin-solid">Cliente desde</span>
+                <span className="text-sm font-bold text-skin-detail">
                     {data.date.toLocaleDateString()}
                 </span>
             </div>
-            <div className="absolute bottom-0 right-0 flex gap-12 mr-12">
+            <div className="absolute bottom-0 right-0 flex gap-12 mr-12 mb-2">
                 <SmallButton
                     Icon={<Box className="fill-skin-darker" />}
                     description="Análise"
