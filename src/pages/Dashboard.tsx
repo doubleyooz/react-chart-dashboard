@@ -2,6 +2,7 @@ import background from '../assets/content/background.png';
 import SideMenu from '../components/SideMenu';
 import Header from '../components/Header';
 import Card from '../components/Card';
+import FirstSection from '../components/FirstSection';
 
 const Dashboard = () => {
     const data = {
@@ -23,7 +24,8 @@ const Dashboard = () => {
                 </div>
                 <Header/>
                 <Card data={data} />
-                Content
+                <FirstSection/>
+                Graphs
             </div>
         </div>
     );
