@@ -29,6 +29,9 @@ module.exports = {
                     white: withOpacity('color-bg-white'),
                 },
             },
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(#E0E1E2, #ffffff)'
+            },
             fill: {
                 skin: {
                     default: 'var(--color-icon-image-1)',

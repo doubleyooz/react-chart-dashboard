@@ -26,22 +26,25 @@ const Label: React.FC<Props> = ({ colour, value, description, percentage }) => {
 
 const FirstSection: React.FC<{}> = () => {
     const series = [1.6, 0.4];
+    const series_2 = [1.6, 1.2];
 
     const options: ApexOptions = {
         chart: {
             height: 130,
         },
-        colors: ['#1fab89'],
+        colors: ['#1fab89', '#1fab8980'],
+        labels: [''],
+        legend: {
+            show: false,
+        },
         plotOptions: {
             pie: {
                 donut: {
                     labels: {
                         show: true,
-                        name: {
+                        total: {
                             show: true,
-                        },
-                        value: {
-                            show: true,
+                            showAlways: false,
                         },
                     },
                 },
@@ -54,10 +57,10 @@ const FirstSection: React.FC<{}> = () => {
             <div className="bg-white px-4 py-8">
                 <Label
                     description="Limite"
-                    value={series[0]}
+                    value={series_2[0]}
                     colour="#EBCC86"
                 />
-                <Label description="Risco" value={series[0]} colour="#F4A0A0" />
+                <Label description="Risco" value={series_2[1]} colour="#F4A0A0" />
                 <Label
                     description="Liquidez"
                     value={80.1}
@@ -65,16 +68,18 @@ const FirstSection: React.FC<{}> = () => {
                     percentage={true}
                 />
             </div>
-            <div className="bg-white">
-                <ReactApexChart
-                    options={options}
-                    series={series}
-                    type="pie"
-                  
-                />
-                <div className="relative rounded-full bg-skin-detail_1 w-20 h-20">
-                    <div className="text-center leading-10 absolute top-1/4 left-1/4 rounded-full bg-white bg-opacity-40 w-10 h-10">
-                        <span>58</span>
+            <div className=''>
+                <div className="bg-white py-9 px-2">
+                    <ReactApexChart
+                        options={options}
+                        series={series}
+                        type="donut"
+                    />
+                    <div className="flex flex-col text-center justify-center text-lg gap-2">
+                        <span className='text-skin-solid font-bold'>Crédito</span>
+                        <span className='text-skin-mild font-bold text-sm'>Riscos: {series_2[1]} M</span>
+                        <div className='h-px mx-14 bg-gradient-radial'></div>
+                        <span className='text-skin-mild font-bold text-sm'>Limite: {series_2[0]} M</span>
                     </div>
                 </div>
             </div>
