@@ -10,7 +10,7 @@ const SmallButton: React.FC<Props> = ({ Icon, description }) => {
                 {Icon}
             </div>
 
-            <span className="hidden 2md:block text-skin-solid text-[10px] font-bold font-['Helvetica']">
+            <span className="hidden md:block text-skin-solid text-[10px] font-bold font-['Helvetica']">
                 {description}
             </span>
         </div>
