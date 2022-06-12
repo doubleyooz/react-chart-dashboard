@@ -65,7 +65,7 @@ const List: React.FC<{}> = () => {
     const [isSelected, setIsSelected] = useState('a');
 
     return (
-        <div className="mb-[60px]">
+        <div className="mb-[60px] max-w-[250px]">
             <SimpleButton
                 Icon={<Home className="fill-skin-default" />}
                 description="Visão Geral"
@@ -103,7 +103,7 @@ const Personal: React.FC<{}> = () => {
 
 const SideMenu: React.FC<{}> = () => {
     return (
-        <div className="px-8 mt-3 hidden sm:block">
+        <div className="px-6 mt-3 hidden sm:block">
             <Logo className="mb-10" />
             <List />
             <span className="text-skin-solid font-bold font-['Helvetica']">CONTA</span>
