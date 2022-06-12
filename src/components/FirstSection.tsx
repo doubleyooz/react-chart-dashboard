@@ -78,7 +78,7 @@ const FirstSection: React.FC<{}> = () => {
             </div>
 
             <div className="bg-white py-9 px-2">
-                <div className="min-w-[250px]">
+                <div className="min-w-[240px]">
                     <ReactApexChart
                         options={options}
                         series={series}
