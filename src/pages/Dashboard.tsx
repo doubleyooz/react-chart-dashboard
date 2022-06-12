@@ -12,12 +12,12 @@ const Dashboard = () => {
         date: new Date()
     }
     return (
-        <div className="flex px-4">
+        <div className="flex px-6">
             <SideMenu />
-            <div className=" flex-grow">
+            <div className="flex-grow">
                 <div className="relative w-full z-[1]">
                     <img
-                        className="absolute top-0 right-0 min-h-[250px] rounded-3xl"
+                        className="absolute top-0 right-0 min-h-[250px] max-h-80 w-full rounded-3xl"
                         src={background}
                         alt=""
                     />

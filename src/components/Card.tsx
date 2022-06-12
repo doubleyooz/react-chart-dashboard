@@ -20,7 +20,7 @@ interface Props {
 
 const Card: React.FC<Props> = ({ data }) => {
     return (
-        <div className="relative flex justify-between h-36 gap-3 m-6 p-6 rounded-2xl bg-gradient-to-b to-[#ffffffcc] from-[#ffffffd1] backdrop-filter backdrop-blur-lg bg-opacity-80">
+        <div className="relative flex justify-between h-36 gap-3 m-6 px-6 rounded-2xl bg-gradient-to-b to-[#ffffffcc] from-[#ffffffd1] backdrop-filter backdrop-blur-lg bg-opacity-80">
             <div className="flex items-center">
                 <img className="w-16 h-16 mr-3 rounded-lg drop-shadow-md" src={logo} alt="" />
                 <div className="flex flex-col mr-11">
