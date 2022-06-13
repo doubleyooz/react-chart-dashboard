@@ -1,6 +1,7 @@
 import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 import SpreadSheet from './SpreadSheet';
+import Restritions from './Restritions';
 
 interface Props {
     colour: string;
@@ -77,8 +78,8 @@ const FirstSection: React.FC<{}> = () => {
                     percentage={true}
                 />
             </div>
-            <div className='flex gap-4 lg:gap-2 2lg:gap-6'>
-                <div className="bg-white py-9 px-2 lg:px-1">
+            <div className='flex gap-4 lg:gap-2 2lg:gap-6 overflow-x-scroll scrollbar-hide'>
+                <div className="bg-white py-9 px-2 lg:px-1 ">
                     <div className="min-w-[180px] md:min-w-[200px] xl:min-w-[240px]">
                         <ReactApexChart
                             options={options}
@@ -102,6 +103,8 @@ const FirstSection: React.FC<{}> = () => {
                 </div>
 
                 <SpreadSheet title={'Balanço e DRE'} />
+
+                <Restritions/>
             </div>
         </div>
     );
