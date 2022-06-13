@@ -113,7 +113,7 @@ const Charts: React.FC<{}> = () => {
                 <SpreadSheet
                     title={'Histórico'}
                     rows={[
-                        'Pré - pgto',
+                        'Pré pagamento',
                         'No vencimento',
                         '1 - 5',
                         '6 - 15',
