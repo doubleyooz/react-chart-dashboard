@@ -43,30 +43,33 @@ const Column: React.FC<Props> = ({ title, values, isLabel, isTail }) => {
     );
 };
 
-const SpreadSheet: React.FC<{ title: string }> = ({ title }) => {
-    const info = [1800340, 168525, 156200, 245810, 1478505, 2584101];
-    let data = info.map((item) => item.toString());
+interface SpreadSheetProps {
+    title: string;
+    rows: string[];
+    columns: string[];
+    values: string[][];
+    minWidth: number;
+
+}
+
+const SpreadSheet: React.FC<SpreadSheetProps> = ({ title, rows, columns, values, minWidth }) => {
+    
 
     return (
-        <div className="flex flex-col bg-skin-white px-[18px] py-9 w-[332px] xl:w-[524px] rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
+        <div className={`flex flex-col bg-skin-white px-[18px] py-9 w-[${minWidth}px] xl:w-[524px] rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]`}>
             <span className="font-bold mb-4">{title}</span>
             <div className="flex ">
                 <Column
                     title={''}
-                    values={[
-                        'Patrimônio Líquido',
-                        'Faturamento',
-                        'EBITDA',
-                        'Lucro Líquido',
-                        'Endividamento CP',
-                        'Endividamento LP',
-                    ]}
+                    values={rows}
                     isLabel={true}
                 />
-                <div className="flex overflow-x-scroll scrollbar-hide">
-                    <Column title={'2019'} values={data} />
-                    <Column title={'2020'} values={data} />
-                    <Column title={'2021'} values={data} isTail={true} />
+                <div className="flex overflow-x-scroll scrollbar-hide">{
+                    columns.map((column, i) => (
+                        <Column title={column} values={values[i]} isTail={i === values.length} />
+                    ))
+                }
+            
                 </div>
             </div>
         </div>

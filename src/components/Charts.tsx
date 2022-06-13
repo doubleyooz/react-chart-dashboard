@@ -71,7 +71,7 @@ const state: { series: any; options: ApexOptions } = {
             '2019',
             '2020',
             '2021',
-            '2022'
+            '2022',
         ],
         markers: {
             size: 0,
@@ -79,12 +79,14 @@ const state: { series: any; options: ApexOptions } = {
         xaxis: {
             type: 'datetime',
         },
-        yaxis: [{
-            min: 0,
-        }, {
-            opposite: true,
-            
-          }],
+        yaxis: [
+            {
+                min: 0,
+            },
+            {
+                opposite: true,
+            },
+        ],
         tooltip: {
             shared: true,
             intersect: false,
@@ -93,17 +95,36 @@ const state: { series: any; options: ApexOptions } = {
 };
 
 const Charts: React.FC<{}> = () => {
+    const info = [1800340, 168525, 156200, 245810, 1432130, 278505, 2584101];
+    const data = [
+        info.map((item) => item.toString()),
+        info.map((item) => item.toString())
+    ];
     return (
         <div>
             <div className="flex flex-wrap gap-3">
-                <div className="w-full py-7 rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)] bg-white">
+                <div className="w-full py-7 max-w-[600px] rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)] bg-white">
                     <ReactApexChart
                         options={state.options}
                         series={state.series}
                         type="line"
                     />
                 </div>
-                <SpreadSheet title={'Histórico'}/>
+                <SpreadSheet
+                    title={'Histórico'}
+                    rows={[
+                        'Pré - pgto',
+                        'No vencimento',
+                        '1 - 5',
+                        '6 - 15',
+                        '16 - 30',
+                        '31 - 60',
+                        '60+',
+                    ]}
+                    columns={['2019', '2020']}
+                    values={[data[0], data[1]]}
+                    minWidth={100}
+                />
             </div>
         </div>
     );

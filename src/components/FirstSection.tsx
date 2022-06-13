@@ -31,7 +31,6 @@ const Label: React.FC<Props> = ({ colour, value, description, percentage }) => {
 const options: ApexOptions = {
     chart: {
         width: '100%',
-        
     },
 
     colors: ['#1fab89', '#1fab8980'],
@@ -58,6 +57,13 @@ const FirstSection: React.FC<{}> = () => {
     const series = [1.6, 0.4];
     const series_2 = [1.6, 1.2];
 
+    const info = [1800340, 168525, 156200, 245810, 1478505, 2584101];
+    const data = [
+        info.map((item) => item.toString()),
+        info.map((item) => item.toString()),
+        info.map((item) => item.toString()),
+    ];
+
     return (
         <div className="flex flex-col xs:flex-row 2xs:flex-col lg:flex-row gap-4 lg:gap-2 2lg:gap-6 px-6 mb-5">
             <div className="flex flex-col 2xs:flex-row lg:flex-col rounded-2xl gap-2 md:gap-0 2md:gap-5 bg-white m-auto xs:m-0 justify-center items-center lg:items-baseline px-1 w-full xs:w-auto xs:min-w-[170px] shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
@@ -78,7 +84,7 @@ const FirstSection: React.FC<{}> = () => {
                     percentage={true}
                 />
             </div>
-            <div className='flex gap-4 lg:gap-2 2lg:gap-6 overflow-x-scroll scrollbar-hide'>
+            <div className="flex gap-4 lg:gap-2 2lg:gap-6 overflow-x-scroll scrollbar-hide">
                 <div className="bg-white py-9 px-2 lg:px-1 rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
                     <div className="min-w-[180px] md:min-w-[200px] xl:min-w-[240px]">
                         <ReactApexChart
@@ -102,9 +108,22 @@ const FirstSection: React.FC<{}> = () => {
                     </div>
                 </div>
 
-                <SpreadSheet title={'Balanço e DRE'} />
+                <SpreadSheet
+                    title={'Balanço e DRE'}
+                    rows={[
+                        'Patrimônio Líquido',
+                        'Faturamento',
+                        'EBITDA',
+                        'Lucro Líquido',
+                        'Endividamento CP',
+                        'Endividamento LP',
+                    ]}
+                    columns={["2019", "2020", "2021"]}
+                    values={data}
+                    minWidth={332}
+                />
 
-                <Restritions/>
+                <Restritions />
             </div>
         </div>
     );
