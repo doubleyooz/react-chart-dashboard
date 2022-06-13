@@ -84,7 +84,7 @@ const FirstSection: React.FC<{}> = () => {
                     percentage={true}
                 />
             </div>
-            <div className="flex gap-4 lg:gap-3 2lg:gap-6 overflow-x-scroll scrollbar-hide">
+            <div className="flex gap-4 lg:gap-3 2lg:gap-6 py-1 overflow-x-scroll scrollbar-hide">
                 <div className="bg-white py-9 px-2 lg:px-1 rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
                     <div className="min-w-[180px] md:min-w-[200px] xl:min-w-[240px]">
                         <ReactApexChart
