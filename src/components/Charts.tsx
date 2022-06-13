@@ -102,7 +102,7 @@ const Charts: React.FC<{}> = () => {
     ];
     return (
         <div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap 2lg:flex-nowrap justify-center gap-3 px-6">
                 <div className="w-full py-7 max-w-[600px] rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)] bg-white">
                     <ReactApexChart
                         options={state.options}
