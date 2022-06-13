@@ -12,16 +12,16 @@ interface Props {
 
 const Label: React.FC<Props> = ({ colour, value, description, percentage }) => {
     return (
-        <div className="flex items-center gap-4 lg:gap-3 xl:gap-6 2xl:gap-8 py-6 px-3 lg:py-0 lg:pb-9">
+        <div className="flex items-center gap-4 lg:gap-2 xl:gap-6 2xl:gap-8 py-6 px-3 lg:py-0 lg:pb-9">
             <div
-                className="px-1 2lg:px-2 py-2 md:py-4 rounded-xl min-w-[100px] text-center"
+                className="px-1 2lg:px-2 py-2 md:py-4 rounded-xl min-w-[80px] 2xl:min-w-[100px] text-center"
                 style={{ backgroundColor: colour }}
             >
                 <span className="text-white text-base xl:text-lg 2xl:text-xl ">
                     {percentage ? `${value} %` : `R$ ${value} M`}
                 </span>
             </div>
-            <span className="font-bold text-base 2xl:text-lg">
+            <span className="font-bold text-base lg:text-[15px] 2xl:text-lg">
                 {description}
             </span>
         </div>
