@@ -1,5 +1,6 @@
 import { ApexOptions } from 'apexcharts';
 import ReactApexChart from 'react-apexcharts';
+import SpreadSheet from './SpreadSheet';
 
 const state: { series: any; options: ApexOptions } = {
     series: [
@@ -35,6 +36,7 @@ const state: { series: any; options: ApexOptions } = {
         },
         chart: {
             width: '100%',
+            height: 450,
             type: 'line',
             stacked: false,
         },
@@ -77,9 +79,12 @@ const state: { series: any; options: ApexOptions } = {
         xaxis: {
             type: 'datetime',
         },
-        yaxis: {
+        yaxis: [{
             min: 0,
-        },
+        }, {
+            opposite: true,
+            
+          }],
         tooltip: {
             shared: true,
             intersect: false,
@@ -90,14 +95,15 @@ const state: { series: any; options: ApexOptions } = {
 const Charts: React.FC<{}> = () => {
     return (
         <div>
-            <div>
-                <div className="min-w-[180px] md:min-w-[200px] xl:min-w-[240px] py-7 rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)] bg-white">
+            <div className="flex flex-wrap gap-3">
+                <div className="w-full py-7 rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)] bg-white">
                     <ReactApexChart
                         options={state.options}
                         series={state.series}
                         type="line"
                     />
                 </div>
+                <SpreadSheet title={'Histórico'}/>
             </div>
         </div>
     );
