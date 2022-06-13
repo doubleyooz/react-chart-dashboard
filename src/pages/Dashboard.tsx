@@ -10,8 +10,8 @@ const Dashboard = () => {
         email: 'gabriel@agromais.com',
         cpf: '123.456.789-50',
         title: 'PRODUTO RURAL',
-        date: new Date()
-    }
+        date: new Date(),
+    };
     return (
         <div className="grid grid-cols-4 lg:grid-cols-5">
             <SideMenu />
@@ -23,11 +23,10 @@ const Dashboard = () => {
                         alt=""
                     />
                 </div>
-                <Header/>
+                <Header />
                 <Card data={data} />
-                <FirstSection/>
-                <Charts/>
-                Graphs
+                <FirstSection />
+                <Charts />
             </div>
         </div>
     );

@@ -94,15 +94,87 @@ const state: { series: any; options: ApexOptions } = {
     },
 };
 
+const state2: { series: any; options: ApexOptions } = {
+    series: [
+        {
+            name: 'Movimentação',
+            type: 'column',
+            data: [1800340, 168525, 156200, 245810, 1432130, 278505, 2584101],
+        },
+    ],
+    options: {
+        title: {
+            text: 'Dados Bancários',
+            align: 'left',
+            margin: 0,
+            offsetX: 28,
+            offsetY: 0,
+            floating: false,
+            style: {
+                fontSize: '18px',
+                fontWeight: 'bold',
+                color: '#2D3748',
+            },
+        },
+
+        chart: {
+            width: '100%',
+            height: 450,
+            type: 'bar',
+        },
+
+        colors: ['#273B4A'],
+        plotOptions: {
+            bar: {
+                horizontal: true,
+            },
+        },
+
+        fill: {
+            opacity: [0.85, 0.25, 1],
+            gradient: {
+                inverseColors: false,
+                shade: 'light',
+                type: 'vertical',
+                opacityFrom: 0.85,
+                opacityTo: 0.55,
+                stops: [0, 100, 100, 100],
+            },
+        },
+
+        xaxis: {
+            categories: [
+                '02/2022',
+                '03/2022',
+                '04/2022',
+                '05/2022',
+                '06/2022',
+                '07/2022',
+                '08/2022',
+            ],
+        },
+        yaxis: {
+            max: 3000000,
+            labels: {
+                show: true,
+            },
+        },
+        tooltip: {
+            shared: true,
+            intersect: false,
+        },
+    },
+};
+
 const Charts: React.FC<{}> = () => {
     const info = [1800340, 168525, 156200, 245810, 1432130, 278505, 2584101];
     const data = [
         info.map((item) => item.toString()),
-        info.map((item) => item.toString())
+        info.map((item) => item.toString()),
     ];
     return (
-        <div>
-            <div className="flex flex-wrap 2lg:flex-nowrap justify-center gap-3 px-6">
+        <div className="">
+            <div className="flex flex-wrap 2lg:flex-nowrap justify-center gap-3 px-6 mb-4">
                 <div className="w-full py-7 max-w-[600px] rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)] bg-white">
                     <ReactApexChart
                         options={state.options}
@@ -122,6 +194,30 @@ const Charts: React.FC<{}> = () => {
                         '60+',
                     ]}
                     columns={['2019', '2020']}
+                    values={[data[0], data[1]]}
+                    minWidth={100}
+                />
+            </div>
+            <div className="flex flex-wrap 2lg:flex-nowrap justify-center gap-3 px-6">
+                <div className="w-full py-7 max-w-[600px] rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)] bg-white">
+                    <ReactApexChart
+                        options={state2.options}
+                        series={state2.series}
+                        type="bar"
+                    />
+                </div>
+                <SpreadSheet
+                    title={'Dados Bancários'}
+                    rows={[
+                        'A vencer',
+                        'Vencido',
+                        'Prejuízo',
+                        '6 - 15',
+                        '16 - 30',
+                        '31 - 60',
+                        'Instituições',
+                    ]}
+                    columns={['Dólar', 'Total']}
                     values={[data[0], data[1]]}
                     minWidth={100}
                 />
