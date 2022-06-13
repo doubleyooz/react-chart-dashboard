@@ -3,6 +3,7 @@ import SideMenu from '../components/SideMenu';
 import Header from '../components/Header';
 import Card from '../components/Card';
 import FirstSection from '../components/FirstSection';
+import Charts from '../components/Charts';
 
 const Dashboard = () => {
     const data = {
@@ -14,7 +15,7 @@ const Dashboard = () => {
     return (
         <div className="grid grid-cols-4 lg:grid-cols-5">
             <SideMenu />
-            <div className="col-span-4 md:col-span-3 lg:col-span-4 flex flex-col">
+            <div className="col-span-4 md:col-span-3 lg:col-span-4 flex flex-col gap-1">
                 <div className="relative z-[1]">
                     <img
                         className="absolute top-0 right-0 min-h-[250px] max-h-80 w-full rounded-3xl"
@@ -25,6 +26,7 @@ const Dashboard = () => {
                 <Header/>
                 <Card data={data} />
                 <FirstSection/>
+                <Charts/>
                 Graphs
             </div>
         </div>

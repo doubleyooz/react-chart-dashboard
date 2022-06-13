@@ -59,7 +59,7 @@ const FirstSection: React.FC<{}> = () => {
     const series_2 = [1.6, 1.2];
 
     return (
-        <div className="flex flex-col xs:flex-row 2xs:flex-col lg:flex-row gap-4 lg:gap-2 2lg:gap-6 px-6">
+        <div className="flex flex-col xs:flex-row 2xs:flex-col lg:flex-row gap-4 lg:gap-2 2lg:gap-6 px-6 mb-5">
             <div className="flex flex-col 2xs:flex-row lg:flex-col rounded-2xl gap-2 md:gap-0 2md:gap-5 bg-white m-auto xs:m-0 justify-center items-center lg:items-baseline px-1 w-full xs:w-auto xs:min-w-[170px] shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
                 <Label
                     description="Limite"
