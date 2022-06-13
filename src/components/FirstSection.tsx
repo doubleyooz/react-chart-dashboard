@@ -12,7 +12,7 @@ interface Props {
 
 const Label: React.FC<Props> = ({ colour, value, description, percentage }) => {
     return (
-        <div className="flex items-center gap-4 lg:gap-2 xl:gap-6 2xl:gap-8 py-6 px-3 lg:py-0 lg:pb-9">
+        <div className="flex items-center  gap-2 lg:gap-2 xl:gap-6 2xl:gap-8 py-6 sm:px-3 lg:py-0 lg:pb-9">
             <div
                 className="px-1 2lg:px-2 py-2 md:py-4 rounded-xl min-w-[80px] 2xl:min-w-[100px] text-center"
                 style={{ backgroundColor: colour }}
@@ -21,7 +21,7 @@ const Label: React.FC<Props> = ({ colour, value, description, percentage }) => {
                     {percentage ? `${value} %` : `R$ ${value} M`}
                 </span>
             </div>
-            <span className="font-bold text-base lg:text-[15px] 2xl:text-lg">
+            <span className="font-bold text-sm sm:text-base lg:text-[15px] 2xl:text-lg">
                 {description}
             </span>
         </div>
@@ -59,8 +59,8 @@ const FirstSection: React.FC<{}> = () => {
     const series_2 = [1.6, 1.2];
 
     return (
-        <div className="flex flex-col lg:flex-row flex-wrap sm:flex-nowrap gap-4 lg:gap-2 2lg:gap-6 px-6 ">
-            <div className="flex flex-row lg:flex-col 2md:gap-5 bg-white justify-center items-center lg:items-baseline lg:py-8">
+        <div className="flex flex-col xs:flex-row 2xs:flex-col lg:flex-row gap-4 lg:gap-2 2lg:gap-6 px-6">
+            <div className="flex flex-col 2xs:flex-row lg:flex-col gap-2 md:gap-0 2md:gap-5 bg-white m-auto xs:m-0 justify-center items-center lg:items-baseline px-1 w-[170px] xs:w-auto xs:min-w-[170px]">
                 <Label
                     description="Limite"
                     value={series_2[0]}
