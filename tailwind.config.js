@@ -32,7 +32,7 @@ module.exports = {
                     detail_1: withOpacity('color-bg-detail-1'),
                     inverted: withOpacity('color-bg-inverted'),
                     white: withOpacity('color-bg-white'),
-                    mild_white: withOpacity('color-bg-mild-white'),
+                    mildWhite: withOpacity('color-bg-mild-white'),
                     warning: withOpacity('color-bg-warning'),
                 },
             },

@@ -29,7 +29,7 @@ const Restritions: React.FC<{}> = () => {
         <div className="bg-skin-white px-3 py-4">
             <Restrition colour="bg-skin-detail_1" Icon={<Correct/>} description={'Sem restritivos'} />
             <Restrition colour="bg-skin-warning" Icon={<Warning/>} description={'Impedimento Encontrado'} />
-            <Restrition colour="bg-skin-mild_white" Icon={<NoInfo/>} description={'Sem informação'} />
+            <Restrition colour="bg-skin-mildWhite" Icon={<NoInfo/>} description={'Sem informação'} />
         </div>
     );
 };

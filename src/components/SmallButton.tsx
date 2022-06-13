@@ -5,8 +5,8 @@ interface Props {
 
 const SmallButton: React.FC<Props> = ({ Icon, description }) => {
     return (
-        <div className="flex items-center gap-1 bg-skin-white">
-            <div className="rounded-xl flex justify-center items-center p-2">
+        <div className="flex items-center rounded-lg p-1.5 gap-2 bg-skin-white hover:bg-skin-mildWhite hover:bg-opacity-60">
+            <div className="rounded-xl flex">
                 {Icon}
             </div>
 

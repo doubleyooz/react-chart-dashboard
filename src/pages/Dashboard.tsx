@@ -12,9 +12,9 @@ const Dashboard = () => {
         date: new Date()
     }
     return (
-        <div className="grid grid-cols-5">
+        <div className="grid grid-cols-4 lg:grid-cols-5">
             <SideMenu />
-            <div className="col-span-4 flex flex-col">
+            <div className="col-span-3 lg:col-span-4 flex flex-col">
                 <div className="relative z-[1]">
                     <img
                         className="absolute top-0 right-0 min-h-[250px] max-h-80 w-full rounded-3xl"
