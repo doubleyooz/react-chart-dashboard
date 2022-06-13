@@ -48,7 +48,7 @@ const SpreadSheet: React.FC<{ title: string }> = ({ title }) => {
     let data = info.map((item) => item.toString());
 
     return (
-        <div className="flex flex-col bg-skin-white px-[18px] py-9 w-[332px] xl:w-[524px]">
+        <div className="flex flex-col bg-skin-white px-[18px] py-9 w-[332px] xl:w-[524px] rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
             <span className="font-bold mb-4">{title}</span>
             <div className="flex ">
                 <Column

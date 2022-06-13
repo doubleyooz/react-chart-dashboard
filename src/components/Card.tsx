@@ -18,7 +18,7 @@ interface Props {
 
 const Card: React.FC<Props> = ({ data }) => {
     return (
-        <div className="relative flex flex-col sm:flex-row items-center justify-between sm:h-36 gap-5 sm:gap-3 m-6 py-8 px-6 rounded-2xl bg-gradient-to-b to-[#ffffffcc] from-[#ffffffd1] backdrop-filter backdrop-blur-lg bg-opacity-80">
+        <div className="relative flex flex-col sm:flex-row items-center justify-between sm:h-36 gap-5 sm:gap-3 m-6 py-8 px-6 rounded-2xl bg-gradient-to-b to-[#ffffffcc] from-[#ffffffd1] backdrop-filter backdrop-blur-lg bg-opacity-80 shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
             <div className="flex flex-col 2xxs:flex-row items-center">
                 <img
                     className="w-16 h-16 mr-3 mb-2 2xxs:mb-0 rounded-lg drop-shadow-md"

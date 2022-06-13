@@ -60,7 +60,7 @@ const FirstSection: React.FC<{}> = () => {
 
     return (
         <div className="flex flex-col xs:flex-row 2xs:flex-col lg:flex-row gap-4 lg:gap-2 2lg:gap-6 px-6">
-            <div className="flex flex-col 2xs:flex-row lg:flex-col gap-2 md:gap-0 2md:gap-5 bg-white m-auto xs:m-0 justify-center items-center lg:items-baseline px-1 w-[170px] xs:w-auto xs:min-w-[170px]">
+            <div className="flex flex-col 2xs:flex-row lg:flex-col rounded-2xl gap-2 md:gap-0 2md:gap-5 bg-white m-auto xs:m-0 justify-center items-center lg:items-baseline px-1 w-[170px] xs:w-auto xs:min-w-[170px] shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
                 <Label
                     description="Limite"
                     value={series_2[0]}
@@ -79,7 +79,7 @@ const FirstSection: React.FC<{}> = () => {
                 />
             </div>
             <div className='flex gap-4 lg:gap-2 2lg:gap-6 overflow-x-scroll scrollbar-hide'>
-                <div className="bg-white py-9 px-2 lg:px-1 ">
+                <div className="bg-white py-9 px-2 lg:px-1 rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
                     <div className="min-w-[180px] md:min-w-[200px] xl:min-w-[240px]">
                         <ReactApexChart
                             options={options}

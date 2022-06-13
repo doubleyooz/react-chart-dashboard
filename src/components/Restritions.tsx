@@ -31,7 +31,7 @@ const Restrition: React.FC<Props> = ({ colour, Icon, description }) => {
 
 const Restritions: React.FC<{}> = () => {
     return (
-        <div className="relative bg-skin-white px-3 py-4">
+        <div className="relative bg-skin-white px-3 py-4 rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
             <Restrition
                 colour="bg-skin-detail_1"
                 Icon={<Correct />}
@@ -53,7 +53,7 @@ const Restritions: React.FC<{}> = () => {
                     Restritivos
                 </span>
             </div>
-            <div className=" absolute bottom-1 right-1 flex flex-col justify-center items-center">
+            <div className=" absolute bottom-3 right-2 flex flex-col justify-center items-center">
                 <Update className="w-2.5 h-2.5" />
                 <span className='text-skin-mild text-[6px]'>Atualizar</span>
             </div>
