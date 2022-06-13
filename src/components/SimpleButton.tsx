@@ -32,7 +32,7 @@ const SimpleButton: React.FC<Props> = ({
             >
                 {description}
             </span>
-            {deleteButton && <Close />}
+            {deleteButton && <Close className='min-w-[16px] min-h-[16px]'/>}
         </div>
     );
 };
