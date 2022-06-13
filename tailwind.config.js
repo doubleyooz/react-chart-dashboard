@@ -55,6 +55,7 @@ module.exports = {
                     default_2: withOpacity('color-bg-detail-1'),
                     darker: withOpacity('color-bg-darker'),
                     warning: withOpacity('color-bg-warning'),
+                    mild: withOpacity('color-text-medium'),
                 },
             },
         },
