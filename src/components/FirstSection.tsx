@@ -12,12 +12,12 @@ interface Props {
 
 const Label: React.FC<Props> = ({ colour, value, description, percentage }) => {
     return (
-        <div className="flex items-center  gap-2 lg:gap-2 xl:gap-6 2xl:gap-8 py-6 sm:px-3 lg:py-0 lg:pb-9">
+        <div className="flex items-center gap-2 2xl:gap-8 py-6 sm:px-3 lg:py-0 lg:pb-9">
             <div
                 className="px-1 2lg:px-2 py-2 md:py-4 rounded-xl min-w-[80px] 2xl:min-w-[100px] text-center"
                 style={{ backgroundColor: colour }}
             >
-                <span className="text-white text-base xl:text-lg 2xl:text-xl ">
+                <span className="text-white text-base 2xl:text-xl ">
                     {percentage ? `${value} %` : `R$ ${value} M`}
                 </span>
             </div>
@@ -65,7 +65,7 @@ const FirstSection: React.FC<{}> = () => {
     ];
 
     return (
-        <div className="flex flex-col xs:flex-row 2xs:flex-col lg:flex-row gap-4 lg:gap-2 2lg:gap-6 px-6 mb-5">
+        <div className="flex flex-col xs:flex-row 2xs:flex-col lg:flex-row gap-4 lg:gap-3 2lg:gap-6 px-6 mb-5">
             <div className="flex flex-col 2xs:flex-row lg:flex-col rounded-2xl gap-2 md:gap-0 2md:gap-5 bg-white m-auto xs:m-0 justify-center items-center lg:items-baseline px-1 w-full xs:w-auto xs:min-w-[170px] shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
                 <Label
                     description="Limite"
@@ -84,7 +84,7 @@ const FirstSection: React.FC<{}> = () => {
                     percentage={true}
                 />
             </div>
-            <div className="flex gap-4 lg:gap-2 2lg:gap-6 overflow-x-scroll scrollbar-hide">
+            <div className="flex gap-4 lg:gap-3 2lg:gap-6 overflow-x-scroll scrollbar-hide">
                 <div className="bg-white py-9 px-2 lg:px-1 rounded-2xl shadow-[0_3px_5px_0px_rgba(0,0,0,0.2)]">
                     <div className="min-w-[180px] md:min-w-[200px] xl:min-w-[240px]">
                         <ReactApexChart
