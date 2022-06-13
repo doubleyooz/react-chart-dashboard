@@ -14,13 +14,13 @@ const Restrition: React.FC<Props> = ({ colour, Icon, description }) => {
     return (
         <div className="flex gap-3">
             <div
-                className={`${colour} min-w-[100px] w-28 h-14 rounded-lg p-2 mb-3`}
+                className={`${colour} min-w-[100px] w-28 h-14 rounded-lg p-2 mb-4`}
             >
                 <img className="" src={serasa} alt="" />
             </div>
             <div className="flex flex-col">
                 <span className="font-bold text-[10px]">{description}</span>
-                <span className="text-[6px] text-skin-mild">
+                <span className="text-[7px] text-skin-mild">
                     Verificado às 21:52:12 (GTM-2)
                 </span>
                 <div>{Icon}</div>
