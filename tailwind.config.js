@@ -10,9 +10,9 @@ module.exports = {
     theme: {
         extend: {
             screens: {
+                'xs': '450px',
                 '2md': '888px',
                 '2lg': '1124px',
-               
             },
             fontSize: {
                 icon: 'var(--text-size-base)',
