@@ -25,7 +25,7 @@ module.exports = {
         extend: {
             
             fontSize: {
-                icon: 'var(--text-size-base)',
+                xxs: 'var(--text-size-base)', //10px
             },
             textColor: {
                 skin: {
@@ -33,6 +33,7 @@ module.exports = {
                     detail: 'var(--color-text-detail)',
                     medium: 'var(--color-text-medium)',
                     mild: 'var(--color-text-medium)',
+                    alert: withOpacity('color-text-alert'),
                 },
             },
             backgroundColor: {

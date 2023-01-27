@@ -28,7 +28,7 @@ const SimpleButton: React.FC<Props> = ({
             <span
                 className={`${
                     isActive ? 'text-skin-solid' : 'text-skin-mild'
-                } text-icon font-bold font-['Helvetica']`}
+                } text-xs font-bold font-['Helvetica']`}
             >
                 {description}
             </span>

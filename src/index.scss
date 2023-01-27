@@ -23,6 +23,7 @@ span {
         --color-text-detail: #313860;
         --color-text-medium: #718096;
         --color-text-mild: #a0aec0;
+        --color-text-alert: 255, 0, 0;
         --color-icon-image-1: #ffffff;
         --color-icon-image-2: #1fab89;
 
@@ -36,7 +37,7 @@ span {
         --color-bg-warning: 236, 178, 46;
 
         //--width-simple-button: calc(50000vw / width + 20px);
-        --text-size-base: 12px;
+        --text-size-base: 10px;
     }
 }
 /*

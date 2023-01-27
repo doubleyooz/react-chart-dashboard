@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import background from '../assets/content/background.png';
 import SideMenu from '../components/SideMenu';
 import Header from '../components/Header';
@@ -5,7 +6,7 @@ import Card from '../components/Card';
 import FirstSection from '../components/FirstSection';
 import Charts from '../components/Charts';
 
-const Dashboard = () => {
+const Dashboard: FC = () => {
     const data = {
         email: 'gabriel@agromais.com',
         cpf: '123.456.789-50',
