@@ -46,7 +46,7 @@ const SignIn: FC = () => {
         <div className="flex justify-center h-screen py-14 ">
             <div className="hidden md:flex w-full bg-skin-detail_1"></div>
             <form
-                className="flex flex-col gap-4 bg-skin-white min-w-min w-2/4 px-8"
+                className="flex flex-col items-center justify-center gap-4 bg-skin-white min-w-min w-2/4 px-8"
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <div className="flex flex-col">
