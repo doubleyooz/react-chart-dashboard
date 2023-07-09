@@ -46,6 +46,7 @@ const Column: React.FC<Props> = ({ title, values, isLabel, isTail }) => {
             </span>
             {values.map((value, i) => (
                 <span
+                    key={value + i}
                     className={`${
                         isLabel
                             ? 'font-bold text-skin-solid text-sm'
@@ -86,6 +87,7 @@ const SpreadSheet: React.FC<SpreadSheetProps> = ({
                 <div className="flex overflow-x-scroll scrollbar-hide">
                     {columns.map((column, i) => (
                         <Column
+                            key={i + column}
                             title={column}
                             values={values[i]}
                             isTail={i === values.length}
