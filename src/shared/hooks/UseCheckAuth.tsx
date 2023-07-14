@@ -12,6 +12,8 @@ const useCheckAuth = (): string | null => {
         console.log(userData);
         if (userData.token) {
             nav('/');
+        } else {
+            nav('/sign-in')
         }
     }, [nav, userData]);
     console.log(userData);

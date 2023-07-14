@@ -43,16 +43,16 @@ const SignIn: FC = () => {
     };
 
     return (
-        <div className="flex justify-center h-screen py-14 ">
+        <div className="flex justify-center h-screen py-14">
             <div className="hidden md:flex w-full bg-skin-detail_1"></div>
             <form
-                className="flex flex-col items-center justify-center gap-4 bg-skin-white min-w-min w-2/4 px-8"
+                className="flex flex-col items-center justify-center gap-4 bg-skin-white border border-gray-200 min-w-min w-2/4 px-8"
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <div className="flex flex-col">
                     <span className="text-xs">EMAIL</span>
                     <input
-                        className="border-b text-lg"
+                        className="border-b text-lg px-2"
                         {...register('email')}
                     />
                     {errors?.email && (
@@ -65,7 +65,7 @@ const SignIn: FC = () => {
                 <div className="flex flex-col">
                     <span className="text-xs">PASSWORD</span>
                     <input
-                        className="border-b text-lg"
+                        className="border-b text-lg px-2"
                         type="password"
                         {...register('password')}
                     />
@@ -77,11 +77,11 @@ const SignIn: FC = () => {
                 </div>
                 <div className="flex justify-center items-center gap-2">
                     <input
-                        className="rounded-full text-white bg-skin-detail_1 py-1 px-2"
+                        className="rounded-full text-white bg-skin-detail_1 cursor-pointer py-1 px-2"
                         type="submit"
                         value="Sign In"
                     />
-                    <span className="text-sm">or Log in</span>
+                    <span className="text-sm cursor-pointer">or Sign Up</span>
                 </div>
             </form>
         </div>

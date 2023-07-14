@@ -10,15 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Dashboard: FC = () => {
     const token = useCheckAuth();
-    console.log(token);
-    const navigate = useNavigate();
-
-    useEffect(() => {
-      if (!token || token === '') {
-        navigate("/login");
-      }
-    }, [token, navigate]);
- 
+   
     const data = {
         email: 'gabriel@agromais.com',
         cpf: '123.456.789-50',
