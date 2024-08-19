@@ -1,3 +1,4 @@
+'use client';
 import type React from 'react';
 import { ClipLoader } from 'react-spinners';
 
@@ -6,7 +7,7 @@ type StyleSize = 'x-small' | 'small' | 'medium' | 'large';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     handleClick?: () => any;
-    type: 'button' | 'submit' | 'reset' | undefined;
+    type?: 'button' | 'submit' | 'reset' | undefined;
     text?: string;
     size?: StyleSize;
     variant?: StyleVariant;
@@ -65,7 +66,7 @@ const generateClassname = (
 const Button: React.FC<ButtonProps> = ({
     handleClick = () => {},
     text,
-    type,
+    type = 'button',
     size = 'medium',
     variant = 'text',
     disabled,
