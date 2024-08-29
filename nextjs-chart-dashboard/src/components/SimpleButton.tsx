@@ -1,4 +1,5 @@
 import React from "react";
+import { CgClose } from "react-icons/cg";
 
 interface Props {
   Icon: React.ReactNode;
@@ -33,7 +34,7 @@ const SimpleButton: React.FC<Props> = ({
       >
         {description}
       </span>
-      {deleteButton && <Close className="min-w-[16px] min-h-[16px]" />}
+      {deleteButton && <CgClose className="min-w-[16px] min-h-[16px]" />}
     </div>
   );
 };
